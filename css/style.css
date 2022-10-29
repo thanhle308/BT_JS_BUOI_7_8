@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: auto;
+    width: 50%;
+    margin-top: 50px;
+}
+
+p#txtarr {
+    height: 30px;
+    background-color: #6b216f1c;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+}
