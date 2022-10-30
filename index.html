@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="array">
             <form>
@@ -23,11 +22,11 @@
                 </div>
                 <button type="button" class="btn btn-primary col-4 " id="btnarr">Thêm</button>
             </form>
-            <div class="array mt-2 ">
-                <p id="txtarr" class="ps-2 text-c"> Mảng là :</p>
+            <div class="array mt-2 ps-3">
+                Mảng là 👉 :<p id="txtarr" class="ps-2 text-c"></p>
             </div>
         </div>
-        <div class="tools">
+        <div class="tools mt-3">
             <p>
                 <!-- 1 -->
                 <button class="btn btn-primary mb-3" id="btn1" type="button" data-bs-toggle="collapse"
@@ -56,7 +55,8 @@
                 </button>
                 <!-- 6 -->
                 <button class="btn btn-primary mb-3" id="btn6" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                    data-bs-target=".multi-collapse6" aria-expanded="false"
+                    aria-controls="collapseExample1 collapseExample">
                     6: Đổi chỗ 2 giá trị
                 </button>
                 <!-- 7 -->
@@ -71,7 +71,8 @@
                 </button>
                 <!-- 9 -->
                 <button class="btn btn-primary mb-3" id="btn9" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                    data-bs-target=".multi-collapse9" aria-expanded="false"
+                    aria-controls="collapseExample2 collapseExample">
                     9: Có bao nhiêu số nguyên
                 </button>
                 <!-- 10 -->
@@ -79,25 +80,51 @@
                     data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     10: So sánh lượng dương và âm
                 </button>
-
             </p>
-            <div class="collapse" id="collapseExample">
+            <div class="collapse multi-collapse6  mb-3" id="collapseExample1">
+                <div class="card card-body">
+                    <form class="row gy-3 align-items-center px-2">
+                        <div class="col-12 col-lg-6">
+                            <input type="number" class="form-control " id="vt1"
+                                placeholder="Nhập số vị trí 1">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="number" class="form-control" id="vt2"
+                                placeholder="Nhập số vị trí 2">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary" id="btndoicho">Đổi
+                                chỗ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="collapse multi-collapse9 mb-3" id="collapseExample2">
+                <div class="card card-body">
+                    <form class="row gy-3 align-items-center py-3">
+                        <div class="col-12 col-lg-6">
+                            <input type="number" class="form-control" id="newarr" placeholder="Nhập số">
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <button class="btn btn-primary me-1 mb-1" id="themarr" type="button">Thêm
+                                số</button>
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            👉<span id="txtnewarr"></span>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <button class="btn btn-primary me-1 mb-1" id="demsonguyen" type="button">Đếm số
+                                nguyên</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="collapse multi-collapse6 multi-collapse9 mb-3" id="collapseExample">
                 <div class="card card-body">
                     <p id="txtkq"></p>
                 </div>
             </div>
-            <div class="collapse" id="collapseExample1">
-                <div class="card card-body">
-                    <p id="txtkq6"></p>
-                </div>
-            </div>
-            <div class="collapse" id="collapseExample2">
-                <div class="card card-body">
-                    <p id="txtkq9"></p>
-                </div>
-            </div>
         </div>
-
     </div>
 
 

@@ -1,7 +1,27 @@
-var arr = [12, -10, 8];
+function checkShow() {
+    let element = document.getElementById('collapseExample');
+    let element1 = document.getElementById('collapseExample1');
+    let element2 = document.getElementById('collapseExample2');
+    /* check class*/
+    if (element.classList.contains('show')) // element.classList.contains('show')  ::: Kiểm tra có class show không =>> trả về true/false
+        element.classList.remove('show');
+    if (element1.classList.contains('show'))
+        element1.classList.remove('show');
+    if (element2.classList.contains('show'))
+        element2.classList.remove('show');
+}
+
+// Khai báo mảng arr toàn cục 
+var arr = [];
 function nhapMang() {
-    arr.push(Number(document.getElementById('arr').value));
-    document.getElementById('txtarr').innerHTML = arr.join(' ');
+    if (document.getElementById('arr').value == "") {
+        document.getElementById('txtarr').innerHTML = "Hãy nhập số vào !";
+    } else {
+        arr.push(Number(document.getElementById('arr').value));
+        document.getElementById('txtarr').innerHTML = arr.join(' ');
+    }
+
+    checkShow();
 }
 document.getElementById('btnarr').onclick = nhapMang;
 
@@ -71,12 +91,22 @@ function bai5() {
         document.getElementById('txtkq').innerHTML = "Số chẵn cuối là : " + arr[chan];
 
     } else {
-        document.getElementById('txtkq').innerHTML = "Không có số chẵn trong chuỗi ";
+        document.getElementById('txtkq').innerHTML = "-1";
     }
 }
 document.getElementById('btn5').onclick = bai5;
 
 // Bai 6 
+function bai6() {
+    var vt1 = Number(document.getElementById('vt1').value);
+    var vt2 = Number(document.getElementById('vt2').value);
+    var doi = arr[vt1];
+    arr[vt1] = arr[vt2];
+    arr[vt2] = doi;
+    document.getElementById('txtkq').innerHTML = arr;
+}
+document.getElementById('btndoicho').onclick = bai6;
+
 // Bai 7
 function bai7() {
     for (var i = 0; i < arr.length; i++) {
@@ -119,6 +149,25 @@ function bai8() {
 document.getElementById('btn8').onclick = bai8;
 
 // Bai 9 
+var newarr = [];
+function nhapMangNew() {
+    if (document.getElementById('newarr').value == "") {
+        document.getElementById('txtnewarr').innerHTML = "Hãy nhập số vào !";
+    } else {
+        newarr.push(Number(document.getElementById('newarr').value));
+        document.getElementById('txtnewarr').innerHTML = newarr.join(' ');
+    }
+}
+document.getElementById('themarr').onclick = nhapMangNew;
+function bai9() {
+    var demsn = 0;
+    for (var i = 0; i < newarr.length; i++) {
+        if (Number.isInteger(newarr[i]))
+            demsn++
+    }
+    document.getElementById('txtkq').innerHTML = "Có "+ demsn +" số nguyên.";
+}
+document.getElementById('demsonguyen').onclick = bai9;
 // Bai 10 
 function bai10() {
     var am = 0, duong = 0;

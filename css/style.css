@@ -9,9 +9,12 @@ body {
     margin-top: 50px;
 }
 
-p#txtarr {
-    height: 30px;
+.array.mt-2 {
     background-color: #6b216f1c;
+    font-size: 25px;
+}
+p#txtarr {
+    display: inline-block;
 }
 form {
     display: flex;
